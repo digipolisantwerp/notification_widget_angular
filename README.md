@@ -1,27 +1,79 @@
-# NotificationWidgetAngular
+# Notification Widget UI (Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.10.
+This is the Angular 7+ UI for a notification center. It is matched by a [corresponding back-end service](todo) which is needed when running it. Implement this in your BFF.
 
-## Development server
+![screenshot](Screenshot.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+There is a demo app, see below for instructions on running it.
 
-## Code scaffolding
+## How to use
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Installing
+
+```sh
+> npm install @acpaas-ui-widgets/ngx-notification-widget
+```
+
+### Using
+
+A BFF service should be running on which the endpoints are configured (see the example app for how to provide such a BFF).
+
+Prerequisite: set up [ACPaaS UI](https://github.com/digipolisantwerp/acpaas-ui_angular/) for your application.
+
+Import the component in your module:
+
+```ts
+import { NotificationWidgetModule } from '@acpaas-ui-widgets/ngx-notififcation-widget';
+
+@NgModule({
+  imports: [
+    ...,
+    NotificationWidgetModule
+  ],
+  ...
+})
+```
+
+### In your template:
+
+```html
+<app-notification-widget 
+url="api/url" >
+</app-notification-widget>
+```
+
+
+### Supported attributes
+
+- **url**: the URL of the back-end service feeding this widget
+
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build notification-widget` to build the widget for retesting in the application. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Run the demo app
 
-## Running end-to-end tests
+```sh
+> npm install
+> npm start
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Browse to [localhost:4200](http://localhost:4200)
 
-## Further help
+To use the remote page, you will need to have also started the corresponding [back-end service](https://github.com/digipolisantwerp/contact-picker_service_nodejs).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Contributing
+
+We welcome your bug reports and pull requests.
+
+Please see our [contribution guide](CONTRIBUTING.md).
+
+## License
+
+This project is published under the [MIT license](LICENSE.md).
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.10.
