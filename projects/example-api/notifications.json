@@ -1,0 +1,35 @@
+{
+  "messages": [
+    {
+      "status": "unread",
+        "id": 1,
+      "message": {
+        "message": "Dit is eerste notificatie"
+      }
+    },
+    {
+      "status": "unread",
+        "id": 2,
+      "message": {
+        "message": "Dit is tweede notificatie met een interne link",
+        "link": {
+          "url": "/123",
+          "external": false
+        }
+      }
+    },
+    {
+      "status": "unread",
+        "id": 3,
+      "message": {
+        "message": "Dit is derde notificatie met een externe link",
+        "link": {
+          "url": "https://google.be",
+          "external": true
+        }
+      }
+    }
+  ],
+  "totalPages": 1,
+  "currentPage": 1
+}

@@ -1,0 +1,53 @@
+@import '../../../../../node_modules/@a-ui/core/dist/assets/styles/quarks';
+
+.notification-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  &.is-loading {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__loading {
+    padding: 15px;
+  }
+
+  .load-more {
+    flex: auto;
+    display: inline-block;
+  }
+
+  &__item {
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    width: 100%;
+    text-align: left;
+
+    &.unread {
+      background-color: mix($brand-primary, $white, 10%);
+    }
+
+    &__action {
+      .m-flyout {
+        &__content {
+          width: max-content;
+
+          .m-button-group {
+            padding-bottom: 0;
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    &__text {
+      align-content: center;
+      display: flex;
+      flex: 2;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px;
+    }
+  }
+}

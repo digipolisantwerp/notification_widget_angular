@@ -1,0 +1,16 @@
+<div auiFlyout class="notification-icon" [size]="sizes.Medium" [align]="align" (opened)="fetchInAppMessages()">
+  <button type="button" class="a-button has-icon" aria-label="Toon de notificaties" auiFlyoutAction>
+    <i class="fa fa-bell" aria-hidden="true"></i>
+    <span *ngIf="notificationsCount > 0" class="a-badge a-badge--danger">{{notificationsCount}}</span>
+  </button>
+  <div auiFlyoutZone [class.has-padding]="notifications.length === 0">
+    <app-notification-list (loadNotificationsFromPage)="loadNotificationsFromPage($event)"
+                           [isLoadingExtraNotifications]="isLoadingExtraNotifications"
+                           [currentPage]="currentPage"
+                           [totalPages]="totalPages"
+                           [url]="url"
+                           [notifications]="notifications" [isLoading]="isLoadingMessages"
+                           [notificationsCount]="notificationsCount"
+                           (updateNotificationCount)="updateNotificationCount($event)"></app-notification-list>
+  </div>
+</div>
