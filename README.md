@@ -64,8 +64,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Browse to [localhost:4200](http://localhost:4200)
 
-To use the remote page, you will need to have also started the corresponding [back-end service](https://github.com/digipolisantwerp/contact-picker_service_nodejs).
-
 ## Contributing
 
 We welcome your bug reports and pull requests.
