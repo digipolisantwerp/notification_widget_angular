@@ -7,11 +7,11 @@
     <ng-container *ngIf="notifications.length > 0">
       <div *ngFor="let item of notifications; let i = index" class="notification-list__item"
            [className]="'notification-list__item  '+ item.status">
-        <p class="notification-list__item__text" *ngIf="!hasProperty(item.message, 'link')">{{item.message.message}}</p>
+        <p class="notification-list__item__text"  (click)="setInAppMessageStatus(item)" *ngIf="!hasProperty(item.message, 'link')">{{item.message.message}}</p>
         <a class="notification-list__item__text" *ngIf="hasProperty(item.message, 'link') && item.message.link.external"
            aria-label="Gaat naar een externe url"
            (click)="setInAppMessageStatus(item)" [href]="item.message.link.url"
-           target="_blank">{{item.message.message}}</a>
+           target="_blank">{{item.message.message}} <span class="fa fa-external-link" aria-hidden="true"></span></a>
         <a class="notification-list__item__text"
            aria-label="In app navigeren"
            *ngIf="hasProperty(item.message, 'link') && !item.message.link.external"
@@ -23,19 +23,20 @@
             <button auiFlyoutAction
                     aria-label="Toon de notificatie opties"
                     class="a-button a-button--transparent has-icon">
-              <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+              <span class="fa fa-ellipsis-v" aria-hidden="true"></span>
             </button>
             <div auiFlyoutZone [class.has-padding]="notifications.length === 0">
               <div class="m-button-group">
                 <button class="a-button-negative a-button--secondary has-icon"
                         aria-label="Verwijder de notificatie"
                         (click)="deleteInAppMessage(item, i);">
-                  <i class="fa fa-trash" aria-hidden="true"></i>
+                  <span class="fa fa-trash" aria-hidden="true"></span>
                 </button>
                 <button class="a-button-negative has-icon"
                         aria-label="Markeer de notificatie als gelezen"
+                        auiFlyoutClose
                         (click)="setInAppMessageStatus(item)">
-                  <i class="fa fa-envelope-open" aria-hidden="true"></i>
+                  <span class="fa fa-envelope-open" aria-hidden="true"></span>
                 </button>
               </div>
             </div>
@@ -43,7 +44,6 @@
         </div>
       </div>
       <button *ngIf="currentPage < totalPages" (click)="loadNotificationsFromPage.emit(currentPage+1)"
-              aria-label="Meer notificaties laden"
               class="a-button a-button--small a-button--transparent load-more has-icon-right">Meer notificaties laden
         <span *ngIf="isLoadingExtraNotifications"
               class="a-spinner a-spinner--sm"

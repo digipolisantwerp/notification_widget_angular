@@ -59,6 +59,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ```sh
 > npm install
+> ng run build:widget
 > npm start
 ```
 

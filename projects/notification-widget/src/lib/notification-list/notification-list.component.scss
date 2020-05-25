@@ -1,5 +1,6 @@
 @import '../../../../../node_modules/@a-ui/core/dist/assets/styles/quarks';
 
+
 .notification-list {
   display: flex;
   flex-wrap: wrap;
@@ -24,6 +25,10 @@
     width: 100%;
     text-align: left;
 
+    a {
+      display: inline;
+    }
+
     &.unread {
       background-color: mix($brand-primary, $white, 10%);
     }
@@ -42,6 +47,7 @@
     }
 
     &__text {
+      cursor: pointer;
       align-content: center;
       display: flex;
       flex: 2;

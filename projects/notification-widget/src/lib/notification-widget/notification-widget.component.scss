@@ -1,12 +1,19 @@
 @import '../../../../../node_modules/@a-ui/core/dist/assets/styles/quarks';
 
+
+.m-flyout:focus {
+  outline: none;
+}
+
 .notification-icon {
   span.a-badge {
     position: absolute;
+    top: 8px;
+    right: -6px;
   }
 
   .m-flyout__content {
-    max-height: 250px;
-    overflow-y: scroll;
+    max-height: 15rem;
+    overflow-y: auto;
   }
 }

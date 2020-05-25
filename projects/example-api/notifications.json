@@ -28,6 +28,61 @@
           "external": true
         }
       }
+    },
+    {
+      "status": "unread",
+        "id": 4,
+      "message": {
+        "message": "Dit is de vierde notificatie met een externe link",
+        "link": {
+          "url": "https://google.be",
+          "external": true
+        }
+      }
+    },
+    {
+      "status": "unread",
+        "id": 5,
+      "message": {
+        "message": "Dit is de vijfde notificatie met een externe link",
+        "link": {
+          "url": "https://google.be",
+          "external": true
+        }
+      }
+    },
+    {
+      "status": "unread",
+        "id": 6,
+      "message": {
+        "message": "Dit is de zesde notificatie met een externe link",
+        "link": {
+          "url": "https://google.be",
+          "external": true
+        }
+      }
+    },
+    {
+      "status": "unread",
+        "id": 7,
+      "message": {
+        "message": "Dit is de zevende notificatie met een externe link",
+        "link": {
+          "url": "https://google.be",
+          "external": true
+        }
+      }
+    },
+    {
+      "status": "unread",
+        "id": 8,
+      "message": {
+        "message": "Dit is de achtste notificatie met een externe link",
+        "link": {
+          "url": "https://google.be",
+          "external": true
+        }
+      }
     }
   ],
   "totalPages": 1,

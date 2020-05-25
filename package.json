@@ -7,10 +7,13 @@
   },
   "scripts": {
     "ng": "ng",
+    "prestart": "npm run build:widget",
     "start": "concurrently --kill-others \"npm run start:api\" \"npm run start:app\"",
     "start:api": "cd projects/example-api && nodemon api.js",
+    "start:widget": "ng build --watch notification-widget",
     "start:app": "ng serve --port=4201",
     "build": "ng build",
+    "build:widget": "ng build notification-widget",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

@@ -23,7 +23,7 @@ app.use(function (req, res, next) {
 
 app.get('/notifications/overview', (req, res) => {
   res.send({
-    data: 3
+    data: 8
   });
 });
 app.get('/notifications', (req, res) => {
