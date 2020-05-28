@@ -1,19 +1,27 @@
 @import '~@a-ui/core/dist/assets/styles/_quarks';
 
 
-.m-flyout:focus {
+::ng-deep .m-flyout:focus {
   outline: none;
 }
 
 .notification-icon {
   span.a-badge {
     position: absolute;
-    top: 8px;
-    right: -6px;
+    top: $spacer / 3;
+    right: $spacer / -4;
   }
 
   .m-flyout__content {
-    max-height: 15rem;
+    max-height: 80vh;
     overflow-y: auto;
+
+    @include at($screen-sm) {
+      max-height: 50vh;
+    }
+
+    @include at($screen-md) {
+      max-height: 30vh;
+    }
   }
 }

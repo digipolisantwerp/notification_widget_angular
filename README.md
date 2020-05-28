@@ -37,7 +37,7 @@ import { NotificationWidgetModule } from '@acpaas-ui-widgets/ngx-notififcation-w
 ### In your template:
 
 ```html
-<app-notification-widget 
+<app-notification-widget
 url="api/url" >
 </app-notification-widget>
 ```
@@ -59,7 +59,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ```sh
 > npm install
-> ng run build:widget
 > npm start
 ```
 

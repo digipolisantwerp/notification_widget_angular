@@ -11,7 +11,7 @@
   }
 
   &__loading {
-    padding: 15px;
+    padding: $spacer;
   }
 
   .load-more {
@@ -22,12 +22,8 @@
   &__item {
     border-bottom: 1px solid $border-color;
     display: flex;
+    justify-content: space-between;
     width: 100%;
-    text-align: left;
-
-    a {
-      display: inline;
-    }
 
     &.unread {
       background-color: mix($brand-primary, $white, 10%);
@@ -39,8 +35,8 @@
           width: max-content;
 
           .m-button-group {
+            flex-wrap: nowrap;
             padding-bottom: 0;
-            display: inline-block;
           }
         }
       }
@@ -48,12 +44,7 @@
 
     &__text {
       cursor: pointer;
-      align-content: center;
-      display: flex;
-      flex: 2;
-      flex-direction: column;
-      justify-content: center;
-      padding: 10px;
+      padding: rem(14);
     }
   }
 }

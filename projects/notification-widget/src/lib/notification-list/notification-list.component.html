@@ -8,7 +8,7 @@
       <div *ngFor="let item of notifications; let i = index" class="notification-list__item"
            [className]="'notification-list__item  '+ item.status">
         <p class="notification-list__item__text"  (click)="setInAppMessageStatus(item)" *ngIf="!hasProperty(item.message, 'link')">{{item.message.message}}</p>
-        <a class="notification-list__item__text" *ngIf="hasProperty(item.message, 'link') && item.message.link.external"
+        <a class="notification-list__item__text has-icon-right" *ngIf="hasProperty(item.message, 'link') && item.message.link.external"
            aria-label="Gaat naar een externe url"
            (click)="setInAppMessageStatus(item)" [href]="item.message.link.url"
            target="_blank">{{item.message.message}} <span class="fa fa-external-link" aria-hidden="true"></span></a>
@@ -19,7 +19,7 @@
            [routerLink]="[item.message.link.url]">{{item.message.message}}</a>
         <div class="notification-list__item__action">
           <div [class.is-open]="item.openActionButtons"
-               auiFlyout [size]="sizes.Full" align="right">
+               auiFlyout [size]="sizes.Full" [align]="'right'">
             <button auiFlyoutAction
                     aria-label="Toon de notificatie opties"
                     class="a-button a-button--transparent has-icon">
@@ -27,7 +27,7 @@
             </button>
             <div auiFlyoutZone [class.has-padding]="notifications.length === 0">
               <div class="m-button-group">
-                <button class="a-button-negative a-button--secondary has-icon"
+                <button class="a-button-negative a-button--danger has-icon"
                         aria-label="Verwijder de notificatie"
                         (click)="deleteInAppMessage(item, i);">
                   <span class="fa fa-trash" aria-hidden="true"></span>
