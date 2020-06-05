@@ -1,6 +1,6 @@
 # Notification Widget UI (Angular)
 
-This is the Angular 7+ UI for a notification center. It is matched by a [corresponding back-end service](todo) which is needed when running it. Implement this in your BFF.
+This is the Angular 7+ UI for a notification center. It is matched by a [corresponding back-end service](https://github.com/digipolisantwerp/notification_service_nodejs) which is needed when running it. Implement this in your BFF.
 
 ![screenshot](Screenshot.png)
 
@@ -23,7 +23,7 @@ Prerequisite: set up [ACPaaS UI](https://github.com/digipolisantwerp/acpaas-ui_a
 Import the component in your module:
 
 ```ts
-import { NotificationWidgetModule } from '@acpaas-ui-widgets/ngx-notififcation-widget';
+import { NotificationWidgetModule } from '@acpaas-ui-widgets/ngx-notification-widget';
 
 @NgModule({
   imports: [
@@ -37,9 +37,9 @@ import { NotificationWidgetModule } from '@acpaas-ui-widgets/ngx-notififcation-w
 ### In your template:
 
 ```html
-<app-notification-widget
+<aui-notification-widget
 url="api/url" >
-</app-notification-widget>
+</aui-notification-widget>
 ```
 
 
@@ -50,7 +50,7 @@ url="api/url" >
 
 ## Build
 
-Run `ng build notification-widget` to build the widget for retesting in the application. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build` to build the widget for retesting in the application. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 

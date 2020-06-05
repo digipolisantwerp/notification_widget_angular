@@ -3,7 +3,7 @@ import { NotificationWidgetService } from '../notification-widget.service';
 import { FlyoutSize } from '@acpaas-ui/ngx-flyout';
 
 @Component({
-  selector: 'app-notification-widget',
+  selector: 'aui-notification-widget',
   styleUrls: ['./notification-widget.component.scss'],
   templateUrl: './notification-widget.component.html'
 })
