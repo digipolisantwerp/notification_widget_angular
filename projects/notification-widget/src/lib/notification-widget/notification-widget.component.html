@@ -5,13 +5,13 @@
           class="a-badge a-badge--danger">{{notificationsCount > 99 ? '99+' : notificationsCount}}</span>
   </button>
   <div auiFlyoutZone [class.has-padding]="notifications.length === 0">
-    <app-notification-list (loadNotificationsFromPage)="loadNotificationsFromPage($event)"
+    <aui-notification-list (loadNotificationsFromPage)="loadNotificationsFromPage($event)"
                            [isLoadingExtraNotifications]="isLoadingExtraNotifications"
                            [currentPage]="currentPage"
                            [totalPages]="totalPages"
                            [url]="url"
                            [notifications]="notifications" [isLoading]="isLoadingMessages"
                            [notificationsCount]="notificationsCount"
-                           (updateNotificationCount)="updateNotificationCount($event)"></app-notification-list>
+                           (updateNotificationCount)="updateNotificationCount($event)"></aui-notification-list>
   </div>
 </div>
