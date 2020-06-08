@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { NotificationListComponent } from './notification-list';
-import { NotificationWidgetComponent } from './notification-widget';
+import { NotificationListComponent } from './notification-list/notification-list.component';
+import { NotificationWidgetComponent } from './notification-widget/notification-widget.component';
 import { NotificationWidgetService } from './notification-widget.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
