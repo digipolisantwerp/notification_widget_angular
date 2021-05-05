@@ -11,7 +11,7 @@
         <a class="notification-list__item__text has-icon-right" *ngIf="hasProperty(item.message, 'link') && item.message.link.external"
            aria-label="Gaat naar een externe url"
            (click)="setInAppMessageStatus(item)" [href]="item.message.link.url"
-           target="_blank">{{item.message.message}} <span class="fa fa-external-link" aria-hidden="true"></span></a>
+           target="_blank">{{item.message.message}}<aui-icon name="ai-navigation-next"></aui-icon></a>
         <a class="notification-list__item__text"
            aria-label="In app navigeren"
            *ngIf="hasProperty(item.message, 'link') && !item.message.link.external"
@@ -23,20 +23,20 @@
             <button auiFlyoutAction
                     aria-label="Toon de notificatie opties"
                     class="a-button a-button--transparent has-icon">
-              <span class="fa fa-ellipsis-v" aria-hidden="true"></span>
+              <aui-icon name="ai-navigation-menu-vertical"></aui-icon>
             </button>
             <div auiFlyoutZone [class.has-padding]="notifications.length === 0">
               <div class="m-button-group">
                 <button class="a-button-negative a-button--danger has-icon"
                         aria-label="Verwijder de notificatie"
                         (click)="deleteInAppMessage(item, i);">
-                  <span class="fa fa-trash" aria-hidden="true"></span>
+                  <aui-icon name="ai-bin"></aui-icon>
                 </button>
                 <button class="a-button-negative has-icon"
                         aria-label="Markeer de notificatie als gelezen"
                         auiFlyoutClose
                         (click)="setInAppMessageStatus(item)">
-                  <span class="fa fa-envelope-open" aria-hidden="true"></span>
+                  <aui-icon name="ai-email-action-unread"></aui-icon>
                 </button>
               </div>
             </div>

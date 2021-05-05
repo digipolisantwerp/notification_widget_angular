@@ -1,6 +1,6 @@
 <div auiFlyout class="notification-icon" [size]="sizes.Medium" [align]="align" (opened)="fetchInAppMessages()">
   <button type="button" class="a-button has-icon" aria-label="Toon de notificaties" auiFlyoutAction>
-    <span class="fa fa-bell" aria-hidden="true"></span>
+    <aui-icon name="ai-alarm-bell"></aui-icon>
     <span *ngIf="notificationsCount > 0"
           class="a-badge a-badge--danger">{{notificationsCount > 99 ? '99+' : notificationsCount}}</span>
   </button>
