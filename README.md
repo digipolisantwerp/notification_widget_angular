@@ -18,7 +18,7 @@ There is a demo app, see below for instructions on running it.
 
 A BFF service should be running on which the endpoints are configured (see the example app for how to provide such a BFF).
 
-Prerequisite: set up [ACPaaS UI](https://github.com/digipolisantwerp/acpaas-ui_angular/) for your application.
+Prerequisite: set up [Antwerp UI](https://github.com/digipolisantwerp/antwerp-ui_angular/) for your application.
 
 Import the component in your module:
 

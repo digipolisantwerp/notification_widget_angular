@@ -4,8 +4,8 @@
   "version": "1.0.1",
   "license": "MIT",
   "author": {
-    "name": "ACPaaS UI team",
-    "email": "acpaas-ui@digipolis.be"
+    "name": "Antwerp UI team",
+    "email": "antwerp-ui@digipolis.be"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,6 @@
   },
   "homepage": "https://github.com/digipolisantwerp/notification_widget_angular#readme",
   "peerDependencies": {
-    "@acpaas-ui/ngx-flyout": "^4.0.0"
+    "@acpaas-ui/ngx-flyout": "^5.0.0"
   }
 }

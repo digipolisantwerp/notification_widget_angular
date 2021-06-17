@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FlyoutModule } from '@acpaas-ui/ngx-flyout';
 import { HttpClientModule } from '@angular/common/http';
+import { IconModule } from '@acpaas-ui/ngx-icon';
 
 @NgModule({
   declarations: [NotificationWidgetComponent, NotificationListComponent],
@@ -13,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     RouterModule,
     FlyoutModule,
-    HttpClientModule
+    HttpClientModule,
+    IconModule
   ],
   providers: [NotificationWidgetService],
   exports: [NotificationWidgetComponent, NotificationListComponent]
