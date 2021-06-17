@@ -1,7 +1,7 @@
 {
   "name": "@acpaas-ui-widgets/ngx-notification-widget",
   "description": "Notifications Smart Widget UI (Angular)",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "license": "MIT",
   "author": {
     "name": "Antwerp UI team",
